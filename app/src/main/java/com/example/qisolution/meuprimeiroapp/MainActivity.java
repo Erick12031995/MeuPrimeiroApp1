@@ -19,16 +19,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Erick Augusto da silva RA:81523752
      * Sera chamado quando clicar em enviar a mensagem, e passará a mensagem para a outra activity
-     * @param view
+     *
      */
 
     public void sendMessage (View view){
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
+        EditText editText = findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 }
+
+// Teste alteracao
 
 
